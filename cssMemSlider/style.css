@@ -85,7 +85,7 @@ body {
 
 .panel {
   display: flex;
-  transform: translate(calc(100% * 3.79), 169%);
+  transform: translate(calc(100% * 3.79), 191%);
   width: 18%;
 }
 
@@ -107,7 +107,7 @@ body {
   background-color: aqua;
 }
 .cont__text {
-  transform: translate(15%, 5rem);
+  transform: translate(15%, 4.5rem);
   font-size: 22px;
   color: #bfb7b7;
 }
