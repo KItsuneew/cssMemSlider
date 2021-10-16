@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(71, 68, 77);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  height: 540px;
+  border-radius: 10px;
+  background-color: #333;
+  margin: 10% auto;
+  position: relative;
+}
+
+.container > input {
+  display: none;
+}
+
+.container__img {
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  overflow: hidden;
+  transform: translateY(16%);
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.img {
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.imgtext {
+  opacity: 0;
+  z-index: 0;
+  position: fixed;
+}
+
+.memes1 {
+  background-image: url(./memesfiles/imgonline-com-ua-Resize-DuLCyiIlum4dJSob.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+.memes2 {
+  background-image: url(./memesfiles/statusas-auf-volk12.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+.memes3 {
+  background-image: url(./memesfiles/statusas-auf-volk15.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+.memes4 {
+  background-image: url(./memesfiles/mem4.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+.memes5 {
+  background-image: url(./memesfiles/statusas-auf-volk41.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+
+.panel {
+  transform: translate(341%, 210%);
+  max-width: 250px;
+  display: flex;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  background-color: rgb(204, 199, 199);
+  border-radius: 10px;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+label:hover {
+  background-color: red;
+}
+label:active {
+  background-color: #333;
+}
+
+.cont__text {
+  transform: translate(15%, 5rem);
+  font-size: 22px;
+  color: #fff;
+}
+
+#mem1:checked ~ .container__img > .memes1,
+#mem2:checked ~ .container__img > .memes2,
+#mem3:checked ~ .container__img > .memes3,
+#mem4:checked ~ .container__img > .memes4,
+#mem5:checked ~ .container__img > .memes5 {
+  opacity: 1;
+  z-index: 1;
+}
+#mem1:checked ~ .cont__text > .img1,
+#mem2:checked ~ .cont__text > .img2,
+#mem3:checked ~ .cont__text > .img3,
+#mem4:checked ~ .cont__text > .img4,
+#mem5:checked ~ .cont__text > .img5 {
+  opacity: 1;
+  z-index: 1;
+}
