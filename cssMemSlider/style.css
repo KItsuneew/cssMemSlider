@@ -6,7 +6,13 @@
 
 body {
   background-color: rgb(71, 68, 77);
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1.3rem;
 }
 
 .container {
@@ -14,8 +20,7 @@ body {
   height: 33rem;
   border-radius: 2%;
   background-color: #333;
-  margin: 10% auto;
-  position: relative;
+  display: block;
 }
 
 .container > input {
@@ -78,9 +83,9 @@ body {
 }
 
 .panel {
-  transform: translate(328%, 210%);
-  max-width: 250px;
   display: flex;
+  transform: translate(calc(100% * 3.79), 169%);
+  width: 18%;
 }
 
 .button {
@@ -103,7 +108,7 @@ body {
 .cont__text {
   transform: translate(15%, 5rem);
   font-size: 22px;
-  color: #fff;
+  color: #bfb7b7;
 }
 
 #mem1:checked ~ .container__img > .memes1,
@@ -137,8 +142,8 @@ body {
 
 .button::after {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 4rem;
+  height: 4rem;
   position: fixed;
 }
 
@@ -146,4 +151,22 @@ video {
   width: inherit;
   object-fit: cover;
   height: 386px;
+}
+
+@media (max-width: 451px) {
+  .container__img {
+    width: 94%;
+    height: 55%;
+  }
+  video {
+    height: 299px;
+  }
+  .panel {
+    transform: translate(32%, 163%);
+    width: calc(50% * 1.5);
+  }
+  .cont__text {
+    transform: translate(3%, 8rem);
+    font-size: 21px;
+  }
 }
